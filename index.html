@@ -115,13 +115,16 @@
                 <h1>Let's work together</h1>
                 <p>Have a question? Need a quote? Let us know!</p>
             </div>
-            <form action="#">
+
+<!--            for testing purposes, action is "#" and method is GET, instead of POST-->
+
+            <form action="#" method="GET">
                 <div>
                     <p>
                         <label for="fullname">Name</label>
                     </p>
                     <p>
-                        <input id="fullname" placeholder="Name" type="text">
+                        <input id="fullname" name="name" placeholder="Name" type="text">
                     </p>
                 </div>
                 <div>
@@ -129,7 +132,7 @@
                         <label for="email">E-mail</label>
                     </p>
                     <p>
-                        <input id="email" placeholder="Email" type="email">
+                        <input id="email" name="email" placeholder="Email" type="email" >
                     </p>
                 </div>
                 <div>
@@ -142,7 +145,7 @@
                 </div>
                 <div class="button">
                     <p>
-                        <button class="pink uppercase">Send</button>
+                        <button class="pink uppercase" type="submit">Send</button>
                     </p>
                 </div>
             </form>
