@@ -218,6 +218,8 @@ section.work span.image-wrapper img {
 section.services article {
     border-style: solid;
     border-width: 2px;
+    box-shadow: 5px 5px 15px var(--shadow);
+
 }
 
 input, textarea {
