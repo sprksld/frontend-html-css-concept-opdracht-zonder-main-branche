@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Roboto&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -14,17 +16,214 @@
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
+
+:root {
+    --purple: #5722CD;
+    --blue: #4B49E8;
+    --rose: #ED4385;
+    --black: #0C0C0C;
+    --magnolia: #F2F0FF;
+
+    --lightgrey: #F3F6F9;
+    --grey: #7A7A7A;
+    --white: #fdfeff;
+
+    --shadow: rgba(60, 60, 60, 0.4);
+}
+
+a {
+    color: var(--purple);
+}
+
+nav ul li a {
+    color: var(--magnolia);
+}
+
+button.pink {
+    color: var(--magnolia);
+    background-color: var(--rose);
+}
+
+header, section.contact {
+    color: var(--magnolia);
+    background-color: var(--blue);
+    background-image: radial-gradient(circle, var(--blue) 35%, var(--purple) 100%);
+}
+
+header h1, header h2 {
+    color: var(--white);
+}
+
+section.hello {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+section.hello h1, section.hello h2 {
+    color: var(--purple);
+}
+
+section.work {
+    color: var(--black);
+    background-color: var(--lightgrey);
+}
+
+section.work h2 {
+    color: var(--black);
+}
+
+section.services {
+    color: var(--grey);
+}
+
+section.services article {
+    border-color: var(--purple);
+}
+
+section.services h2 {
+    color: var(--purple);
+}
+section.contact h1, section.contact h2 {
+    color: var(--white);
+}
+
+footer {
+    color: var(--magnolia);
+    background-color: var(--black);
+}
+
+footer section.copyright {
+    color: var(--magnolia);
+    background-color: var(--black);
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
+/* ------------------------------- 3.1 Fonts --------------------------------------- */
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", Times, serif;
+}
+
+header h1, header h2 {
+    font-size: 2em;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+section.hello h1, section.hello h2 {
+    font-size: 1.25em;
+}
+
+section.hello p {
+    font-size: 1.1em;
+}
+
+section.work h1, section.work h2 {
+    font-size: 2em;
+}
+
+section.work p {
+    font-size: 1.3em;
+}
+
+section.contact h1, section.contact h2 {
+    font-size: 2em;
+}
+
+section.contact div > div > p {
+    font-size: 1.1em;
+    padding: 25px 0;
+}
+
+button {
+    font-size: 0.8em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
 /* --------------- 3.1 Reusables ----------------------- */
+
+.nice-link {
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+button {
+    margin: 40px;
+    border: 0;
+    border-radius: 50vh;
+    padding: 20px 40px 20px 40px;
+    box-shadow: 5px 5px 15px var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    flex-grow: 1;
+    align-items: center;
+}
+
+section.work span.image-wrapper img {
+    box-shadow: 5px 5px 35px var(--black);
+    border-radius: 16px;
+}
+
+.image-wrapper {
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
+    object-fit: cover;
+}
+
+section.services article {
+    border-style: solid;
+    border-width: 2px;
+}
+
+input, textarea {
+    padding: 10px;
+    background-color: var(--magnolia);
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -32,6 +231,292 @@
 
 /* --------------- 4.1 Header ------------------------- */
 
-/* --------------- 4.2 Introduction ------------------- */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 40px;
+}
+
+header section article {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
+}
+
+section.header article h1, section.header article h2, section.header article p
+{
+    text-align: center;
+    padding: 0.6em 0;
+}
+
+
+
+
+header {
+    position: relative;
+    padding-bottom: 150px;
+}
+
+span.squiggle > img {
+    position: absolute;
+    bottom: 0;
+    left: calc((100% - 80px) / 2);
+}
+
+/* --------------- 4.2 Main ------------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+main section article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* --------------- 4.2.1 Hello ------------------- */
+
+section.hello {
+    flex-basis: 501px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+}
+
+section.hello article {
+    max-width: 700px;
+}
+
+section.hello article > * {
+    padding: 1em 0;
+}
+
+section.hello h1, section.hello h2, section.hello p {
+    text-align: center;
+}
+
+/* --------------- 4.2.2 Work ------------------- */
+
+section.work {
+    flex-basis: 502px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+section.work article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.work article div > * {
+    padding: 15px 0;
+}
+
+section.work article div.example {
+    padding: 25px 0;
+}
+/* --------------- 4.2.3 Services ------------------- */
+
+section.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+section.services > div.services-flex {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-basis: 400px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-content: center;
+    gap: 40px;
+}
+
+section.services > div.services-flex article {
+    flex-basis: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 25px;
+    aspect-ratio: 1;
+}
+
+section.services article img {
+    height: 100px;
+    width: 100px;
+}
+
+section.services article > h2 {
+    padding: 0 0 20px 0;
+}
+
+/* --------------- 4.2.4 Contact ------------------- */
+
+section.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+section.contact > div {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-grow: 1;
+}
+
+section.contact > div > div > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section.contact div form * {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    flex-grow: 1;
+}
+
+section.contact > div > form > div {
+    padding: 25px 0;
+}
+
+section.contact div.button > p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --------------- 4.3 Footer ------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (min-width: 900px ) {
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .image-wrapper img {
+        transition: transform 0.5s;
+    }
+
+    .image-wrapper img:hover {
+        transform: scale(1.01);
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 350px;
+        flex-shrink: 1;
+        flex-grow: 0;
+        padding: 20px;
+    }
+
+    section.work article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+    }
+
+    section.work article div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 40px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: 400px;
+    }
+
+    section.work article:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    section.work article div.example {
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    section.work article div:not(.example) {
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    section.work article div.example span.image-wrapper img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section.contact > div {
+        max-width: 900px;
+    }
+}
